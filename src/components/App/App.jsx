@@ -1,17 +1,16 @@
-import { lazy, Suspense } from 'react';
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { SharedLayout } from './SharedLayout/SharedLayout';
-import WithLoading from './RouteComponent';
-import { getLastUser } from '../redux/authorization';
+import { SharedLayout } from '../SharedLayout/SharedLayout';
+import WithLoading from '../../routes/routeComponent';
+import { getLastUser } from '../../redux/slices/authorizationSlice';
 import './App.module.css';
 
-const Register = lazy(() => import('../pages/Register/Register'));
-const LogIn = lazy(() => import('../pages/LogIn/LogIn'));
-const Contacts = lazy(() => import('../pages/Contacts/Contacts'));
-const Home = lazy(() => import('../pages/Home/Home'));
-const NotFound = lazy(() => import('../pages/NotFound/NotFound'));
+const Register = lazy(() => import('../../pages/Register/Register'));
+const LogIn = lazy(() => import('../../pages/LogIn/LogIn'));
+const Contacts = lazy(() => import('../../pages/Contacts/Contacts'));
+const Home = lazy(() => import('../../pages/Home/Home'));
+const NotFound = lazy(() => import('../../pages/NotFound/NotFound'));
 
 const ContactsWithLoading = WithLoading(Contacts);
 const RegisterWithLoading = WithLoading(Register);

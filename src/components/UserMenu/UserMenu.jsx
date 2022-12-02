@@ -1,10 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
-import { logoutUser } from 'redux/authorization';
+import { logoutUser } from 'redux/slices/authorizationSlice';
 
 import s from './UserMenu.module.css';
-import '../App.module.css';
+import '../App/App.module.css';
 
 const getActive = ({ isActive }) => (isActive ? s.active : s.link);
 

@@ -5,7 +5,7 @@ import {
   useGetContactsQuery,
 } from 'services/contactsAPI';
 
-import '../App.module.css';
+import '../App/App.module.css';
 import './ContactForm.module.css';
 
 const ContactForm = () => {

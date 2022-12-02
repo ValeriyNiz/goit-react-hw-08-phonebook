@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { logInUser } from 'redux/authorization';
+import { logInUser } from 'redux/slices/authorizationSlice';
 
 import s from '../../components/ContactForm/ContactForm.module.css';
-import '../../components/App.module.css';
+import '../../components/App/App.module.css';
 
 const LogIn = () => {
   const dispatch = useDispatch();

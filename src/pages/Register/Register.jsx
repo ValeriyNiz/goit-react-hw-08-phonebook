@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { register } from 'redux/authorization';
+import { register } from 'redux/slices/authorizationSlice';
 
-import '../../components/App.module.css';
+import '../../components/App/App.module.css';
 import s from '../../components/ContactForm/ContactForm.module.css';
 import '../../components/ContactForm/ContactForm.module.css';
 

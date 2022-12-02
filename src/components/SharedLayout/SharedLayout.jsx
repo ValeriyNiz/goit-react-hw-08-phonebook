@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import UserMenu from 'components/UserMenu/UserMenu';
 
 import { Container, Header, NavLinkSt } from './SharedLayout.styled';
-import '../App.module.css';
+import '../App/App.module.css';
 import '../../components/ContactForm/ContactForm.module.css';
 
 export const SharedLayout = () => {
@@ -37,7 +37,7 @@ export const SharedLayout = () => {
           {isLoggedIn && <UserMenu />}
         </Header>
       </Container>
-      <main className="background">
+      <main>
         <Container>
           <Outlet />
         </Container>

@@ -17,7 +17,7 @@ export const register = createAsyncThunk(
       setToken(data.token);
       return data;
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue(error.response.data);
     }
   }
 );
@@ -30,7 +30,7 @@ export const logInUser = createAsyncThunk(
       setToken(data.token);
       return data;
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue(error.response.data);
     }
   }
 );
@@ -42,7 +42,7 @@ export const logoutUser = createAsyncThunk(
       await axios.post('/users/logout', credentials);
       setToken(null);
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue(error.response.data);
     }
   }
 );

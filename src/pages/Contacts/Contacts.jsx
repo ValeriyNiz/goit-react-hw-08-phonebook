@@ -3,8 +3,7 @@ import { useSelector } from 'react-redux';
 import ContactForm from 'components/ContactForm/ContactForm';
 import Filter from 'components/Filter/Filter';
 import ContactList from 'components/ContactList/ContactList';
-import s from '../../components/App.module.css';
-import '../../components/App.module.css';
+import s from '../../components/App/App.module.css';
 
 const Contacts = () => {
   const tokenAuth = useSelector(state => state.auth);
